@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nawanan Khaunsamakhom — Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Nawanan Khaunsamakhom — Game Designer, UX/UI Designer, Graphic Designer, and Project Manager.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --surface: #ffffff;
+      --surface2: #f3f2ef;
+      --ink: #111114;
+      --muted: #5c5c66;
+      --line: #e6e4df;
+      --accent: #5b5fef;
+      --game: #5b5fef;
+      --ux: #0fa89c;
+      --graphic: #ef4f6f;
+      --pm: #e08a2c;
+      --radius: 16px;
+      --maxw: 1200px;
+      --nav-h: 68px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: clip
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', 'Noto Sans Thai', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    [data-lang="en"] .th {
+      display: none
+    }
+
+    [data-lang="th"] .en {
+      display: none
+    }
+
+    [data-lang="th"] body,
+    [data-lang="th"] {
+      font-family: 'Noto Sans Thai', 'Inter', sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    /* ===== NAV ===== */
+    header.nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(250, 249, 247, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      height: var(--nav-h);
+    }
+
+    .nav-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      font-size: 16px;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--game), #7c6ef5);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .lang-toggle {
+      display: flex;
+      border: 1.5px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: #fff;
+    }
+
+    .lang-toggle button {
+      border: 0;
+      background: transparent;
+      padding: 7px 16px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      color: var(--muted);
+      font-family: inherit;
+      transition: .15s;
+    }
+
+    .lang-toggle button.active {
+      background: var(--ink);
+      color: #fff
+    }
+
+    /* ===== HERO — split layout ===== */
+    .hero {
+      min-height: 100vh;
+      padding-top: var(--nav-h);
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 60px 0 60px;
+    }
+
+    .hero-grid>* {
+      min-width: 0
+    }
+
+    /* Left: Text */
+    .hero-text {}
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      border: 1px solid var(--line);
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: var(--surface);
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ux);
+      display: inline-block;
+      animation: pulse 2s infinite
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1)
+      }
+
+      50% {
+        opacity: .4;
+        transform: scale(1.5)
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5.5vw, 64px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, var(--game) 0%, #7c6ef5 50%, var(--ux) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .name-th {
+      background: linear-gradient(135deg, #e08a2c 0%, #ef4f6f 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .role-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px
+    }
+
+    .role-tag {
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      color: #fff;
+    }
+
+    .hero p.lede {
+      font-size: clamp(14.5px, 1.8vw, 17px);
+      color: var(--muted);
+      max-width: 48ch;
+      margin: 0 0 32px;
+      line-height: 1.75;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14.5px;
+      cursor: pointer;
+      border: 1.5px solid transparent;
+      transition: .22s;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--game), #7c6ef5);
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(91, 95, 239, .22);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 36px rgba(91, 95, 239, .32)
+    }
+
+    .btn-ghost {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--line)
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px)
+    }
+
+    /* Right: Desk image */
+    .hero-visual {
+      position: relative;
+    }
+
+    .desk-img-wrap {
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0, 0, 0, .14), 0 0 0 1px var(--line);
+      transition: .3s;
+    }
+
+    .desk-img-wrap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 40px 100px rgba(0, 0, 0, .18)
+    }
+
+    .desk-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block
+    }
+
+    /* Floating badges on the image */
+    .float-badge {
+      position: absolute;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      animation: floatY 3s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    .float-badge .fb-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .float-badge .fb-label {
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .float-badge .fb-value {
+      font-size: 14px;
+      font-weight: 800;
+      line-height: 1.1
+    }
+
+    .fb-1 {
+      top: -16px;
+      left: -20px;
+      animation-delay: 0s
+    }
+
+    .fb-2 {
+      bottom: 40px;
+      right: -24px;
+      animation-delay: 1s
+    }
+
+    .fb-3 {
+      bottom: -14px;
+      left: 20%;
+      animation-delay: 2s
+    }
+
+    @keyframes floatY {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-8px)
+      }
+    }
+
+    /* ===== DISCIPLINES — 2x2 grid ===== */
+    .disc-section {
+      padding: 80px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .disc-header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .disc-header h2 {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: 8px
+    }
+
+    .disc-header p {
+      font-size: 15.5px;
+      color: var(--muted);
+      max-width: 50ch;
+      margin: 0 auto
+    }
+
+
+
+    .disc-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      transition: .25s;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .disc-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 44px rgba(0, 0, 0, .08);
+      border-color: var(--card-color)
+    }
+
+    .disc-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      background: var(--surface2);
+    }
+
+    .disc-content {
+      flex: 1
+    }
+
+    .disc-title {
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 4px;
+      color: var(--ink)
+    }
+
+    .disc-sub {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 10px
+    }
+
+    .disc-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px
+    }
+
+    .disc-skill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      background: var(--surface2);
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    /* ===== PROFILE MINI — horizontal strip ===== */
+    /* ===== PROFILE SECTION — premium layout ===== */
+    .profile-section {
+      padding: 56px 0;
+      border-top: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .profile-inner {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 32px;
+      align-items: center;
+    }
+
+    /* Container for name, description and CTA */
+    .profile-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .profile-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .profile-photo {
+        margin: 0 auto 16px;
+      }
+    }
+
+    .profile-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--surface2);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+      flex-shrink: 0;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .profile-info {}
+
+    .profile-name {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -.02em;
+      margin-bottom: 2px
+    }
+
+    .profile-desc {
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 52ch;
+      line-height: 1.6
+    }
+
+    .profile-cta {
+      flex-shrink: 0
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px
+      }
+
+      .hero-visual {
+        order: -1
+      }
+
+
+
+      .profile-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center
+      }
+
+      .float-badge {
+        display: none
+      }
+    }
+
+    @media(max-width:560px) {
+      .wrap {
+        padding: 0 16px
+      }
+
+      .nav-inner {
+        padding: 0 16px
+      }
+
+      .hero-grid {
+        padding: 36px 0 40px
+      }
+
+      .hero-cta {
+        flex-direction: column
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center
+      }
+    }
+
+    /* ===== EDITORIAL INTRO SCROLL ===== */
+    .intro-scroll-track {
+      --intro-progress: 0;
+      --portfolio-opacity: 1;
+      --portfolio-blur: 0px;
+      --portfolio-track: -.055em;
+      --portfolio-y: 0px;
+      --welcome-opacity: 0;
+      --welcome-y: 28svh;
+      position: relative;
+      height: 100svh;
+      background: var(--accent);
+      color: #fff;
+      z-index: 100;
+    }
+
+    body.intro-enhanced .intro-scroll-track {
+      height: 240svh
+    }
+
+    .intro-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      height: 100svh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(24px, 3vw, 48px);
+      background: linear-gradient(180deg, rgba(20, 22, 100, .06), transparent 30%, transparent 72%, rgba(20, 22, 100, .12));
+    }
+
+    .intro-word {
+      position: absolute;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(4rem, 13.5vw, 12rem);
+      font-weight: 900;
+      letter-spacing: var(--portfolio-track);
+      text-transform: uppercase;
+      text-align: center;
+      line-height: .82;
+      inset-inline: 16px;
+      opacity: var(--portfolio-opacity);
+      filter: blur(var(--portfolio-blur));
+      transform: translateY(var(--portfolio-y)) scale(calc(1 + (var(--intro-progress) * .012)));
+      will-change: opacity, transform, filter;
+    }
+
+    #wordPortfolio {
+      animation: intro-load .8s cubic-bezier(.22, 1, .36, 1) both
+    }
+
+    .intro-word.welcome {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(5rem, 15vw, 13.5rem);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      font-style: italic;
+      top: 50%;
+      opacity: var(--welcome-opacity);
+      filter: none;
+      transform: translateY(calc(-50% + var(--welcome-y)));
+    }
+
+    @keyframes intro-load {
+      from {
+        opacity: 0;
+        transform: translateY(14px)
+      }
+    }
+
+    /* Editorial Micro-details */
+    .intro-meta {
+      position: absolute;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.78);
+      line-height: 1.4;
+    }
+
+    .meta-tl {
+      top: 32px;
+      left: 32px;
+    }
+
+    .meta-tr {
+      top: 32px;
+      right: 32px;
+      text-align: right;
+    }
+
+    .meta-bl {
+      bottom: 32px;
+      left: 32px;
+    }
+
+    .meta-br {
+      bottom: 32px;
+      right: 32px;
+      text-align: right;
+    }
+
+    .meta-bc {
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .meta-capabilities {
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      white-space: nowrap
+    }
+
+    .intro-scroll-label {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(70px, 7vw, 96px);
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, .9);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .intro-scroll-label::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 24px;
+      background: currentColor;
+      margin: 10px auto 0;
+    }
+
+    body.intro-active header.nav {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    header.nav {
+      transition: opacity .3s ease
+    }
+
+    @media (max-width: 768px) {
+      body.intro-enhanced .intro-scroll-track {
+        height: 220svh
+      }
+
+      .intro-word {
+        inset-inline: 10px
+      }
+
+      #wordPortfolio {
+        font-size: clamp(3.25rem, 17.5vw, 6rem)
+      }
+
+      .intro-word.welcome {
+        font-size: clamp(4.25rem, 22vw, 7rem)
+      }
+
+      .meta-tl {
+        top: 22px;
+        left: 18px
+      }
+
+      .meta-tr {
+        top: 22px;
+        right: 18px
+      }
+
+      .meta-bl {
+        bottom: 22px;
+        left: 18px;
+        max-width: 45%
+      }
+
+      .meta-br {
+        bottom: 22px;
+        right: 18px;
+        max-width: 42%
+      }
+
+      .meta-capabilities {
+        display: none
+      }
+
+      .intro-scroll-label {
+        bottom: 72px
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      body.intro-enhanced .intro-scroll-track {
+        height: auto;
+        min-height: 0
+      }
+
+      .intro-sticky {
+        position: relative;
+        height: 100svh;
+        min-height: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(8px, 2vh, 18px);
+        padding: 88px 20px
+      }
+
+      .intro-word {
+        position: relative;
+        inset: auto;
+        min-height: 0;
+        display: block;
+        padding: 0;
+        opacity: 1;
+        filter: none;
+        transform: none;
+        white-space: normal
+      }
+
+      #wordPortfolio {
+        animation: none
+      }
+
+      .intro-word.welcome {
+        top: auto;
+        font-size: clamp(3.75rem, 17vw, 9rem);
+        opacity: 1;
+        transform: none
+      }
+
+      .intro-scroll-label {
+        display: none
+      }
+
+      body.intro-active header.nav {
+        opacity: 1;
+        pointer-events: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== EDITORIAL INTRO ===== -->
+  <div class="intro-scroll-track" id="introTrack">
+    <div class="intro-sticky">
+      <div class="intro-meta meta-tl">PORTFOLIO / 2026</div>
+      <div class="intro-meta meta-tr">NAWANAN KHAUNSAMAKHOM</div>
+      <div class="intro-meta meta-bl">INTERACTIVE EXPERIENCE DESIGNER</div>
+      <div class="intro-meta meta-capabilities">GAME DESIGN&nbsp;&nbsp; UX/UI&nbsp;&nbsp; VISUAL SYSTEMS</div>
+      <div class="intro-meta meta-br">CHIANG MAI, THAILAND</div>
+
+      <div class="intro-word" id="wordPortfolio">PORTFOLIO</div>
+      <div class="intro-word welcome" id="wordWelcome" aria-hidden="true">WELCOME</div>
+
+      <div class="intro-scroll-label" aria-hidden="true">SCROLL TO ENTER</div>
+    </div>
+  </div>
+
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">NK</span>
+        <span class="en" style="font-weight:800">Nawanan K.</span>
+        <span class="th" style="font-weight:800">นวนันท์ ข.</span>
+      </a>
+      <div class="lang-toggle">
+        <button id="btnEN" class="active">EN</button>
+        <button id="btnTH">TH</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO: Left text + Right desk image ===== -->
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+
+      <!-- LEFT: Text content -->
+      <div class="hero-text">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span class="en">CMU · Digital Game · Arts, Media &amp; Technology</span>
+          <span class="th">ม.เชียงใหม่ · Digital Game · ศิลปะ สื่อ และเทคโนโลยี</span>
+        </span>
+
+        <h1>
+          <span class="en">Nawanan<br><span class="gradient-text">Khaunsamakhom</span></span>
+          <span class="th">นวนันท์<br><span class="name-th">ขุนสามารถ</span></span>
+        </h1>
+
+        <div class="role-tags">
+          <span class="role-tag" style="background:var(--game)">Game Design</span>
+          <span class="role-tag" style="background:var(--ux)">UX/UI</span>
+          <span class="role-tag" style="background:var(--graphic)">Graphic</span>
+          <span class="role-tag" style="background:var(--pm)">PM</span>
+        </div>
+
+        <p class="lede">
+          <span class="en">I design game worlds, interfaces, and visuals — from environment design in Unreal Engine to
+            UX prototypes in Figma and brand graphics in Adobe.</span>
+          <span class="th">ออกแบบโลกเกม อินเทอร์เฟซ และงานภาพ ตั้งแต่สภาพแวดล้อมใน Unreal Engine ถึง UX Prototype ใน
+            Figma และกราฟิกแบรนด์ใน Adobe</span>
+        </p>
+
+        <div class="hero-cta">
+          <a href="cv.html" class="btn btn-primary" id="btn-view-portfolio">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+              <path
+                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7Z" />
+            </svg>
+            <span class="en">View Portfolio</span><span class="th">ดูผลงาน</span>
+          </a>
+          <a href="cv.html#contact" class="btn btn-ghost" id="btn-contact">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+            <span class="en">Contact Me</span><span class="th">ติดต่อ</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Desk illustration -->
+      <div class="hero-visual">
+        <!-- Floating badges -->
+        <div class="float-badge fb-1">
+          <div class="fb-icon" style="background:var(--game)">🎮</div>
+          <div>
+            <div class="fb-label">Unreal Engine</div>
+            <div class="fb-value">Game Design</div>
+          </div>
+        </div>
+        <div class="float-badge fb-2">
+          <div class="fb-icon" style="background:var(--ux)">✦</div>
+          <div>
+            <div class="fb-label">Figma</div>
+            <div class="fb-value">UX/UI Design</div>
+          </div>
+        </div>
+        <div class="float-badge fb-3">
+          <div class="fb-icon" style="background:var(--graphic)">🎨</div>
+          <div>
+            <div class="fb-label">Adobe Suite</div>
+            <div class="fb-value">Graphic Design</div>
+          </div>
+        </div>
+
+        <div class="desk-img-wrap">
+          <img src="images/desk_hero.jpg" alt="Tech workspace — game design, UX/UI, and coding on a designer's desk">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== DISCIPLINE 2x2 GRID ===== -->
+  <section class="disc-section" id="disciplines">
+    <div class="wrap">
+      <div class="disc-header">
+        <!-- ===== DISCIPLINE 2x2 GRID ===== -->
+        <section class="disc-section" id="disciplines">
+          <div class="wrap">
+            <div class="disc-header">
+              <h2><span class="en">Core Skills</span><span class="th">ทักษะหลัก</span></h2>
+              <p>
+                <span class="en">Explore my work across five core disciplines and the value they create.</span>
+                <span class="th">สำรวจผลงานทั้ง 5 สายงานหลักและคุณค่าที่สร้างขึ้น</span>
+              </p>
+            </div>
+
+            <style>
+              .disc-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+                gap: 18px;
+              }
+
+              @media (max-width: 768px) {
+                .disc-grid {
+                  grid-template-columns: 1fr;
+                }
+              }
+            </style>
+
+            <div class="disc-grid">
+              <div class="disc-card" style="--card-color:var(--game)">
+                <div class="disc-icon">🌍</div>
+                <div class="disc-content">
+                  <div class="disc-title"><span class="en">World Building &amp; Env</span><span
+                      class="th">การสร้างโลกและสภาพแวดล้อม</span></div>
+                  <div class="disc-sub en">Map &amp; environment design, level design, lighting, and storytelling
+                    through gameplay.</div>
+                  <div class="disc-sub th">ออกแบบแผนที่ สภาพแวดล้อม ด่าน แสง และเล่าเรื่องผ่านเกมเพลย์</div>
+                  <div class="disc-skills">
+                    <span class="disc-skill">Unreal Engine</span>
+                    <span class="disc-skill">Level Design</span>
+                    <span class="disc-skill">Lighting</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="disc-card" style="--card-color:var(--game)">
+                <div class="disc-icon">👾</div>
+                <div class="disc-content">
+                  <div class="disc-title"><span class="en">Sprite &amp; Game Art</span><span
+                      class="th">ศิลปะเกมและสไปรต์</span></div>
+                  <div class="disc-sub en">Character design, enemy behavior, 2.5D/3D assets, and parallax illustrations.
+                  </div>
+                  <div class="disc-sub th">ออกแบบตัวละคร พฤติกรรมศัตรู ชิ้นงาน 2.5D/3D และภาพประกอบ Parallax</div>
+                  <div class="disc-skills">
+                    <span class="disc-skill">Pixel Art</span>
+                    <span class="disc-skill">2.5D/3D Assets</span>
+                    <span class="disc-skill">Animation</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="disc-card" style="--card-color:var(--ux)">
+                <div class="disc-icon">✦</div>
+                <div class="disc-content">
+                  <div class="disc-title"><span class="en">Interface &amp; Interaction</span><span
+                      class="th">อินเทอร์เฟซและการโต้ตอบ</span></div>
+                  <div class="disc-sub en">User flow, interaction design, prototyping, and playable ad mechanics.</div>
+                  <div class="disc-sub th">User Flow, ออกแบบ Interaction, สร้าง Prototype และกลไกโฆษณาเกม</div>
+                  <div class="disc-skills">
+                    <span class="disc-skill">Figma</span>
+                    <span class="disc-skill">Prototyping</span>
+                    <span class="disc-skill">User Flow</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="disc-card" style="--card-color:var(--graphic)">
+                <div class="disc-icon">🎨</div>
+                <div class="disc-content">
+                  <div class="disc-title"><span class="en">Visual Communication</span><span
+                      class="th">การสื่อสารด้วยภาพ</span></div>
+                  <div class="disc-sub en">Video editing, branding, AI animation pipelines, and promotional materials.
+                  </div>
+                  <div class="disc-sub th">ตัดต่อวิดีโอ สร้างแบรนด์ กระบวนการแอนิเมชัน AI และสื่อโปรโมต</div>
+                  <div class="disc-skills">
+                    <span class="disc-skill">Premiere Pro</span>
+                    <span class="disc-skill">Illustrator</span>
+                    <span class="disc-skill">Gen AI</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="disc-card" style="--card-color:var(--pm)">
+                <div class="disc-icon">⚙️</div>
+                <div class="disc-content">
+                  <div class="disc-title"><span class="en">Systems &amp; Operations</span><span
+                      class="th">ระบบและการดำเนินงาน</span></div>
+                  <div class="disc-sub en">Data workflows, event coordination, sponsorships, and stakeholder management.
+                  </div>
+                  <div class="disc-sub th">โฟลว์ข้อมูล ประสานงานอีเวนต์ สปอนเซอร์ และดูแลผู้มีส่วนได้ส่วนเสีย</div>
+                  <div class="disc-skills">
+                    <span class="disc-skill">Workflow Design</span>
+                    <span class="disc-skill">Management</span>
+                    <span class="disc-skill">Data Ops</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="profile-photo">
+          <img src="images/profile_photo.png" alt="Nawanan Khaunsamakhom">
+        </div>
+        <div class="profile-content">
+          <h1 class="profile-name">
+            <span class="en">Nawanan Khaunsamakhom</span>
+            <span class="th">นวนันท์ ขุนสามารถ</span>
+          </h1>
+          <p class="profile-desc">
+            <span class="en">Digital Game student at Chiang Mai University. Passionate about game worlds, user
+              interfaces, and visual storytelling. GPAX 3.33</span>
+            <span class="th">นักศึกษาสาขา Digital Game มหาวิทยาลัยเชียงใหม่ หลงใหลในโลกเกม
+              อินเทอร์เฟซและการเล่าเรื่องด้วยภาพ GPAX 3.33</span>
+        </div>
+        <div class="profile-cta">
+          <a href="cv.html" class="btn btn-primary" id="btn-view-cv">
+            <span class="en">View Full CV &amp; Portfolio →</span>
+            <span class="th">ดู CV และผลงานทั้งหมด →</span>
+          </a>
+        </div>
+      </div>
+  </section>
+
+  <script>
+    const html = document.documentElement;
+    const btnEN = document.getElementById('btnEN');
+    const btnTH = document.getElementById('btnTH');
+    function setLang(lang) {
+      html.setAttribute('data-lang', lang);
+      html.setAttribute('lang', lang === 'th' ? 'th' : 'en');
+      btnEN.classList.toggle('active', lang === 'en');
+      btnTH.classList.toggle('active', lang === 'th');
+      try { localStorage.setItem('portfolio-lang', lang); } catch (e) { }
+    }
+    btnEN.addEventListener('click', () => setLang('en'));
+    btnTH.addEventListener('click', () => setLang('th'));
+    try { const s = localStorage.getItem('portfolio-lang'); if (s === 'th') setLang('th'); } catch (e) { }
+  </script>
+
+  <script>
+    // Editorial intro driven by normalized scroll progress
+    const introTrack = document.getElementById('introTrack');
+    const wordPortfolio = document.getElementById('wordPortfolio');
+    const wordWelcome = document.getElementById('wordWelcome');
+    const reduceIntroMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const clampIntro = value => Math.min(1, Math.max(0, value));
+    const introRange = (value, start, end) => clampIntro((value - start) / (end - start));
+    let introFrame = 0;
+
+    function updateEditorialIntro() {
+      introFrame = 0;
+      if (!introTrack) return;
+      if (reduceIntroMotion.matches) {
+        document.body.classList.remove('intro-active');
+        return;
+      }
+
+      const rect = introTrack.getBoundingClientRect();
+      const travel = Math.max(1, introTrack.offsetHeight - window.innerHeight);
+      const progress = clampIntro(-rect.top / travel);
+      const portfolioOut = introRange(progress, .18, .48);
+      const welcomeIn = introRange(progress, .30, .58);
+      const portfolioExitOffset = Math.min(150, window.innerHeight * .18);
+      const welcomeEnterOffset = Math.min(180, window.innerHeight * .24);
+
+      introTrack.style.setProperty('--intro-progress', progress.toFixed(4));
+      introTrack.style.setProperty('--portfolio-opacity', (1 - portfolioOut).toFixed(4));
+      introTrack.style.setProperty('--portfolio-blur', `${(portfolioOut * 4).toFixed(2)}px`);
+      introTrack.style.setProperty('--portfolio-track', `${(-.055 + portfolioOut * .05).toFixed(4)}em`);
+      introTrack.style.setProperty('--portfolio-y', `${(-portfolioOut * portfolioExitOffset).toFixed(2)}px`);
+      introTrack.style.setProperty('--welcome-opacity', welcomeIn.toFixed(4));
+      const welcomePosition = (1 - welcomeIn) * welcomeEnterOffset;
+      introTrack.style.setProperty('--welcome-y', `${welcomePosition.toFixed(2)}px`);
+      document.body.classList.toggle('intro-active', progress < .82);
+    }
+
+    function requestEditorialIntroUpdate() {
+      if (!introFrame) introFrame = requestAnimationFrame(updateEditorialIntro);
+    }
+
+    addEventListener('scroll', requestEditorialIntroUpdate, { passive: true });
+    addEventListener('resize', requestEditorialIntroUpdate, { passive: true });
+    reduceIntroMotion.addEventListener?.('change', updateEditorialIntro);
+    document.body.classList.add('intro-enhanced');
+    if (!reduceIntroMotion.matches) document.body.classList.add('intro-active');
+    updateEditorialIntro();
+  </script>
+</body>
+
+</html>

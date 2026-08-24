@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV & Portfolio — Nawanan Khaunsamakhom</title>
+<meta name="description" content="CV and portfolio of Nawanan Khaunsamakhom — Game Designer, UX/UI Designer, Graphic Designer, and Project Manager.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9f7;
+    --surface:#ffffff;
+    --surface2:#f3f2ef;
+    --ink:#111114;
+    --muted:#5c5c66;
+    --line:#e6e4df;
+    --accent:#5b5fef;
+    --game:#5b5fef;
+    --ux:#0fa89c;
+    --graphic:#ef4f6f;
+    --pm:#e08a2c;
+    --radius:16px;
+    --maxw:1180px;
+    --nav-h:68px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  html,body{max-width:100%;overflow-x:hidden}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter','Noto Sans Thai',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  [data-lang="en"] .th{display:none}
+  [data-lang="th"] .en{display:none}
+  [data-lang="th"] body,[data-lang="th"]{font-family:'Noto Sans Thai','Inter',sans-serif;}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{scroll-margin-top:calc(var(--nav-h) + 16px)}
+
+  /* ===== NAV ===== */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,249,247,0.9);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+    height:var(--nav-h);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:0 24px;height:100%;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:16px;}
+  .brand-mark{
+    width:36px;height:36px;border-radius:10px;
+    background:linear-gradient(135deg,var(--game),#7c6ef5);
+    color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:900;flex-shrink:0;
+  }
+  nav.links{display:flex;gap:2px;align-items:center;flex-wrap:wrap}
+  nav.links a{
+    padding:7px 12px;border-radius:999px;font-size:14px;font-weight:600;
+    color:var(--muted);transition:.15s;white-space:nowrap;
+  }
+  nav.links a:hover{color:var(--ink);background:var(--surface2)}
+  nav.links a.active-nav{color:var(--ink);font-weight:800}
+  .nav-right{display:flex;align-items:center;gap:12px}
+  .back-link{
+    display:inline-flex;align-items:center;gap:6px;
+    font-size:13.5px;font-weight:700;color:var(--muted);
+    padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);
+    background:var(--surface);transition:.15s;
+  }
+  .back-link:hover{color:var(--ink);border-color:var(--ink)}
+  .lang-toggle{
+    display:flex;border:1.5px solid var(--line);border-radius:999px;overflow:hidden;flex-shrink:0;background:#fff;
+  }
+  .lang-toggle button{
+    border:0;background:transparent;padding:6px 14px;font-weight:700;font-size:13px;cursor:pointer;color:var(--muted);
+    font-family:inherit;transition:.15s;
+  }
+  .lang-toggle button.active{background:var(--ink);color:#fff}
+  .nav-toggle-btn{display:none}
+
+  /* ===== CV SECTION ===== */
+  .cv-section{padding:56px 0 64px}
+  .cv-grid{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:48px;
+    align-items:start;
+  }
+
+  /* Left col */
+  .cv-left{}
+  .cv-photo-wrap{margin-bottom:28px}
+  .cv-photo{
+    width:180px;height:180px;border-radius:20px;overflow:hidden;
+    border:1px solid var(--line);box-shadow:0 12px 40px rgba(0,0,0,.12);
+    background:#eee;
+  }
+  .cv-photo img{width:100%;height:100%;object-fit:cover}
+
+  .cv-name{font-size:22px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px;line-height:1.1}
+  .cv-role-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 20px}
+  .cv-role-tag{font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:999px;color:#fff}
+
+  .cv-info-list{margin-bottom:24px}
+  .cv-info-item{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+  .cv-info-item:last-child{border-bottom:0}
+  .cv-info-icon{font-size:14px;margin-top:1px;flex-shrink:0;opacity:.6}
+  .cv-info-label{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:1px}
+  .cv-info-val{font-size:14px;font-weight:600}
+  .cv-info-val a{color:var(--accent)}
+
+  .section-label{
+    font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line);
+  }
+
+  /* Skills */
+  .skills-block{margin-bottom:28px}
+  .skill-group{margin-bottom:18px}
+  .skill-group-title{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em}
+  .skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+  .skill-tag{
+    font-size:12.5px;font-weight:600;padding:5px 11px;
+    background:var(--surface2);border-radius:999px;border:1px solid var(--line);
+  }
+
+  /* Right col */
+  .cv-right{}
+  .cv-block{margin-bottom:40px}
+
+  /* Timeline */
+  .timeline{margin-top:4px}
+  .tl-item{
+    position:relative;padding:0 0 28px 26px;border-left:2px solid var(--line);
+  }
+  .tl-item:last-child{border-left:2px solid transparent;padding-bottom:0}
+  .tl-item::before{
+    content:'';position:absolute;left:-7px;top:4px;
+    width:12px;height:12px;border-radius:50%;background:var(--ink);
+    border:2px solid var(--bg);
+  }
+  .tl-date{font-size:12.5px;font-weight:800;color:var(--muted);letter-spacing:.03em;margin-bottom:3px}
+  .tl-title{font-size:16px;font-weight:800;margin-bottom:2px;line-height:1.25}
+  .tl-org{font-size:13.5px;color:var(--muted);margin-bottom:8px}
+  .tl-item ul{margin:0;padding-left:16px;color:var(--muted);font-size:13.5px}
+  .tl-item ul li{margin-bottom:3px}
+
+  /* Education card */
+  .edu-card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    padding:20px 22px;
+  }
+  .edu-header{margin-bottom:10px}
+  .edu-date{font-size:12.5px;font-weight:800;color:var(--muted);margin-bottom:4px}
+  .edu-school{font-size:17px;font-weight:900;margin-bottom:2px}
+  .edu-major{font-size:13.5px;color:var(--muted)}
+  .gpa-chip{
+    display:inline-block;
+    background:linear-gradient(135deg,var(--game),#7c6ef5);
+    color:#fff;border-radius:10px;padding:8px 18px;font-size:13.5px;font-weight:700;
+    margin-top:12px;
+  }
+  .gpa-chip b{font-size:22px;display:block;line-height:1.1;letter-spacing:-.02em}
+
+  /* ===== PORTFOLIO TABS ===== */
+  .portfolio-section{padding:0 0 80px}
+  .portfolio-header{
+    padding:36px 0 0;
+    margin-bottom:0;
+  }
+  .portfolio-title{font-size:clamp(22px,3vw,30px);font-weight:900;letter-spacing:-.02em;margin-bottom:4px}
+  .portfolio-sub{font-size:15px;color:var(--muted)}
+
+  /* Tab bar */
+  .tab-bar{
+    display:flex;gap:0;
+    border-bottom:2px solid var(--line);
+    margin:28px 0 36px;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .tab-bar::-webkit-scrollbar{display:none}
+  .tab-btn{
+    flex-shrink:0;
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;
+    font-size:14.5px;font-weight:700;
+    color:var(--muted);
+    background:transparent;border:0;cursor:pointer;
+    border-bottom:3px solid transparent;margin-bottom:-2px;
+    transition:.18s;font-family:inherit;
+    white-space:nowrap;
+  }
+  .tab-btn:hover{color:var(--ink)}
+  .tab-btn.active{color:var(--ink);border-bottom-color:var(--tab-color)}
+  .tab-dot{width:8px;height:8px;border-radius:50%;background:var(--tab-color);flex-shrink:0}
+
+  /* Tab content */
+  .tab-pane{display:none}
+  .tab-pane.active{display:block}
+
+  /* Project grid */
+  .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .card{
+    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;display:flex;flex-direction:column;transition:.22s;
+  }
+  .card:hover{box-shadow:0 20px 48px rgba(0,0,0,.12);transform:translateY(-3px)}
+  .card-img{
+    background:var(--surface2);cursor:zoom-in;
+    display:flex;align-items:center;justify-content:center;
+    max-height:480px;overflow:hidden;border-bottom:1px solid var(--line);
+  }
+  .card-img img{width:100%;height:100%;object-fit:contain;object-position:top}
+  .card-body{padding:20px 22px 24px}
+  .card-index{font-size:11.5px;font-weight:800;color:var(--muted);letter-spacing:.05em;margin-bottom:6px}
+  .card-body h3{font-size:17px;margin:0 0 8px;letter-spacing:-.01em;font-weight:800;line-height:1.25}
+  .card-body p{font-size:13.5px;color:var(--muted);margin:0;line-height:1.6}
+  .project-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .project-link,.portfolio-pdf-link{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-size:12px;font-weight:800;letter-spacing:.035em;padding:8px 13px;transition:.18s}
+  .project-link:hover,.portfolio-pdf-link:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+  .project-link:focus-visible,.portfolio-pdf-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .portfolio-file-row{display:flex;justify-content:flex-end;margin:0 0 20px}
+  .card-body p + p { margin-top: 8px }
+  .card-body .sub {
+    font-size: 12.5px;
+    color: var(--muted);
+    opacity: .75;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .card-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+  .card-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1.5px solid var(--line);
+    color: var(--ink);
+    background: var(--surface);
+    transition: .15s;
+    text-decoration: none;
+  }
+  .card-actions a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(91, 95, 239, .06);
+  }
+  .card-actions a svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  /* PM note — removing UX/UI label in PM */
+  .cat-tag{
+    display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;
+    letter-spacing:.06em;padding:3px 9px;border-radius:6px;color:#fff;margin-bottom:8px;
+  }
+
+  /* ===== FOOTER / CONTACT ===== */
+  footer.contact{
+    background:var(--ink);color:#fff;padding:64px 0 36px;
+  }
+  footer.contact h2{font-size:clamp(26px,4vw,38px);margin:0 0 14px;font-weight:900;letter-spacing:-.02em}
+  footer.contact p.sub{color:#c7c7cf;font-size:15.5px;max-width:52ch;margin:0 0 32px}
+  .contact-grid{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:44px}
+  .contact-item{
+    background:#1d1d22;border-radius:14px;padding:16px 20px;flex:1;min-width:180px;
+    color:#fff;border:1px solid #2c2c33;transition:.15s;
+  }
+  a.contact-item:hover{background:#26262c;border-color:#5b5fef}
+  .contact-item .label{font-size:11px;color:#9d9da8;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px}
+  .contact-item .value{font-size:15px;font-weight:700}
+  .foot-bottom{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+    border-top:1px solid #2c2c33;padding-top:22px;color:#8f8f99;font-size:13px;
+  }
+
+  /* ===== LIGHTBOX ===== */
+  .lightbox{
+    position:fixed;inset:0;background:rgba(10,10,12,.92);display:none;
+    align-items:center;justify-content:center;z-index:200;padding:32px;flex-direction:column;
+  }
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(900px,92vw);max-height:78vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+  .lightbox-cap{color:#e9e9ee;max-width:700px;text-align:center;margin-top:18px;font-size:14px;line-height:1.6}
+  .lightbox-close{
+    position:absolute;top:22px;right:28px;color:#fff;font-size:28px;
+    background:none;border:0;cursor:pointer;width:44px;height:44px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-family:inherit;
+  }
+  .lightbox-close:hover{background:rgba(255,255,255,.12)}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:960px){
+    .cv-grid{grid-template-columns:1fr}
+    .cv-left{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+    .cv-photo{width:130px;height:130px}
+    nav.links{display:none}
+  }
+  @media(max-width:700px){
+    .project-grid{grid-template-columns:1fr}
+    .cv-left{grid-template-columns:1fr}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 16px}
+    .nav-inner{padding:0 16px}
+    .tab-btn{padding:10px 14px;font-size:13px}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">NK</span>
+      <span class="en" style="font-weight:800;letter-spacing:-.01em">Nawanan K.</span>
+      <span class="th" style="font-weight:800">นวนันท์ ข.</span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#cv"><span class="en">About / CV</span><span class="th">เกี่ยวกับฉัน</span></a>
+      <a href="#portfolio"><span class="en">Portfolio</span><span class="th">ผลงาน</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="th">ติดต่อ</span></a>
+    </nav>
+    <div class="nav-right">
+      <a href="index.html" class="back-link">
+        ← <span class="en">Home</span><span class="th">หน้าหลัก</span>
+      </a>
+      <div class="lang-toggle">
+        <button id="btnEN" class="active">EN</button>
+        <button id="btnTH">TH</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== CV SECTION ===== -->
+<section class="cv-section" id="cv">
+  <div class="wrap">
+    <div class="cv-grid">
+
+      <!-- LEFT: Photo + Info + Skills -->
+      <div class="cv-left">
+        <div class="cv-photo-wrap">
+          <div class="cv-photo"><img src="images/profile_photo.png" alt="Nawanan Khaunsamakhom"></div>
+        </div>
+
+        <div>
+          <div class="cv-name">
+            <span class="en">Nawanan Khaunsamakhom</span>
+            <span class="th">นวนันท์ ขุนสามารถ</span>
+          </div>
+
+          <div class="cv-role-tags">
+            <span class="cv-role-tag" style="background:var(--game)">Game Design</span>
+            <span class="cv-role-tag" style="background:var(--ux)">UX/UI</span>
+            <span class="cv-role-tag" style="background:var(--graphic)">Graphic</span>
+            <span class="cv-role-tag" style="background:var(--pm)">PM</span>
+          </div>
+
+          <div class="cv-info-list">
+            <div class="cv-info-item">
+              <span class="cv-info-icon">📍</span>
+              <div>
+                <div class="cv-info-label"><span class="en">Location</span><span class="th">ที่อยู่</span></div>
+                <div class="cv-info-val"><span class="en">Chiang Mai, Thailand</span><span class="th">เชียงใหม่, ไทย</span></div>
+              </div>
+            </div>
+            <div class="cv-info-item">
+              <span class="cv-info-icon">✉️</span>
+              <div>
+                <div class="cv-info-label">Email</div>
+                <div class="cv-info-val"><a href="mailto:nawanan_k@cmu.ac.th">nawanan_k@cmu.ac.th</a></div>
+              </div>
+            </div>
+            <div class="cv-info-item">
+              <span class="cv-info-icon">📞</span>
+              <div>
+                <div class="cv-info-label"><span class="en">Phone</span><span class="th">โทรศัพท์</span></div>
+                <div class="cv-info-val"><a href="tel:0931657171">093-165-7171</a></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="skills-block">
+            <div class="section-label"><span class="en">Skills</span><span class="th">ทักษะ</span></div>
+
+            <div class="skill-group">
+              <div class="skill-group-title"><span class="en">Game Design &amp; Environment</span><span class="th">ออกแบบเกมและสภาพแวดล้อม</span></div>
+              <div class="skill-tags">
+                <span class="skill-tag">Unreal Engine</span>
+                <span class="skill-tag">Unity</span>
+                <span class="skill-tag"><span class="en">Map &amp; Environment Design</span><span class="th">ออกแบบแผนที่และสภาพแวดล้อม</span></span>
+                <span class="skill-tag"><span class="en">Level Design</span><span class="th">ออกแบบด่าน</span></span>
+                <span class="skill-tag"><span class="en">2D Art for Game</span><span class="th">2D Art สำหรับเกม</span></span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-title">UX/UI Design</div>
+              <div class="skill-tags">
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Prototyping</span>
+                <span class="skill-tag">User Flow</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-title"><span class="en">Graphic Design</span><span class="th">กราฟิกดีไซน์</span></div>
+              <div class="skill-tags">
+                <span class="skill-tag">Adobe Photoshop</span>
+                <span class="skill-tag">Adobe Illustrator</span>
+                <span class="skill-tag">Canva</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-title"><span class="en">Motion &amp; Video</span><span class="th">โมชันและวิดีโอ</span></div>
+              <div class="skill-tags">
+                <span class="skill-tag">Adobe Premiere Pro</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-title"><span class="en">Project &amp; Workflow Management</span><span class="th">บริหารโครงการและเวิร์กโฟลว์</span></div>
+              <div class="skill-tags">
+                <span class="skill-tag">Google Workspace</span>
+                <span class="skill-tag">Google Forms</span>
+                <span class="skill-tag">Google Sheets</span>
+                <span class="skill-tag">Microsoft Office</span>
+                <span class="skill-tag"><span class="en">Web Content Management</span><span class="th">จัดการเนื้อหาเว็บไซต์</span></span>
+                <span class="skill-tag"><span class="en">Workflow Design</span><span class="th">ออกแบบเวิร์กโฟลว์</span></span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <div class="skill-group-title"><span class="en">Soft Skills</span><span class="th">ทักษะด้านบุคคล</span></div>
+              <div class="skill-tags">
+                <span class="skill-tag"><span class="en">Communication</span><span class="th">การสื่อสาร</span></span>
+                <span class="skill-tag"><span class="en">Presentation</span><span class="th">การนำเสนอ</span></span>
+                <span class="skill-tag"><span class="en">Problem Solving</span><span class="th">การแก้ปัญหา</span></span>
+                <span class="skill-tag"><span class="en">Critical Thinking</span><span class="th">การคิดวิเคราะห์</span></span>
+                <span class="skill-tag"><span class="en">Team Collaboration</span><span class="th">การทำงานเป็นทีม</span></span>
+                <span class="skill-tag"><span class="en">Time Management</span><span class="th">บริหารเวลา</span></span>
+              </div>
+            </div>
+          </div>
+        </div><!-- /right of cv-left grid -->
+      </div><!-- /cv-left -->
+
+      <!-- RIGHT: About + Work + Education -->
+      <div class="cv-right">
+
+        <!-- About -->
+        <div class="cv-block">
+          <div class="section-label"><span class="en">About</span><span class="th">เกี่ยวกับฉัน</span></div>
+          <p style="color:var(--muted);font-size:15px;line-height:1.75">
+            <span class="en">Interested in pursuing a career as a Game Designer and UX/UI Designer, with strengths in environment and map design using Unreal Engine and Unity. Focused on lighting, color, sound, and storytelling through gameplay — with the ability to design UI in Figma and create 2D, 2.5D, and 3D game assets. Also experienced in project coordination, stakeholder communication, and data/workflow management from hands-on work as an Association Manager Secretary.</span>
+            <span class="th">สนใจสายงานนักออกแบบเกมและนักออกแบบ UX/UI มีจุดแข็งด้านการออกแบบสภาพแวดล้อมและแผนที่ด้วย Unreal Engine และ Unity เน้นการจัดแสง สี เสียง และเล่าเรื่องผ่านเกมเพลย์ ออกแบบ UI ด้วย Figma และสร้างชิ้นงาน 2D, 2.5D, 3D ได้ นอกจากนี้มีประสบการณ์ด้านการประสานงานโครงการและบริหารข้อมูลจากการทำงานเป็นเลขานุการผู้จัดการสมาคม</span>
+          </p>
+        </div>
+
+        <!-- Work History -->
+        <div class="cv-block">
+          <div class="section-label"><span class="en">Work History</span><span class="th">ประวัติการทำงาน</span></div>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-date">2022</div>
+              <div class="tl-title"><span class="en">Freelance Video Editor &amp; Content Assistant</span><span class="th">ฟรีแลนซ์ตัดต่อวิดีโอและผู้ช่วยจัดทำคอนเทนต์</span></div>
+              <div class="tl-org"><span class="en">YouTube Channel</span><span class="th">ช่อง YouTube</span></div>
+              <ul class="en">
+                <li>Edited video content to match the creator's style and audience engagement</li>
+                <li>Filmed content and managed scene composition</li>
+                <li>Created and organized storyboards; adjusted audio, pacing, and visual flow</li>
+              </ul>
+              <ul class="th">
+                <li>ตัดต่อวิดีโอให้สอดคล้องกับสไตล์ครีเอเตอร์และการมีส่วนร่วมของผู้ชม</li>
+                <li>ถ่ายทำและจัดองค์ประกอบฉาก</li>
+                <li>สร้างสตอรี่บอร์ด ปรับเสียง จังหวะ และลำดับภาพ</li>
+              </ul>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2022 – 2025</div>
+              <div class="tl-title"><span class="en">Freelance Graphic Designer</span><span class="th">ฟรีแลนซ์กราฟิกดีไซเนอร์</span></div>
+              <div class="tl-org"><span class="en">Self-employed</span><span class="th">อิสระ</span></div>
+              <ul class="en">
+                <li>Designed graphic materials for restaurants — vinyl banners, menus, and promotional media</li>
+                <li>Developed visual concepts aligned with brand identity</li>
+                <li>Used Photoshop, Illustrator, and Canva in all projects</li>
+              </ul>
+              <ul class="th">
+                <li>ออกแบบสื่อกราฟิกให้ร้านอาหาร เช่น ป้ายไวนิล เมนู และสื่อโปรโมชัน</li>
+                <li>พัฒนาแนวคิดภาพให้สอดคล้องกับอัตลักษณ์แบรนด์</li>
+                <li>ใช้ Photoshop, Illustrator และ Canva ในทุกโปรเจกต์</li>
+              </ul>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2025</div>
+              <div class="tl-title"><span class="en">Manager Secretary</span><span class="th">เลขานุการผู้จัดการสมาคม</span></div>
+              <div class="tl-org"><span class="en">Thailand Structural Steel Society</span><span class="th">สมาคมเหล็กโครงสร้างไทย</span></div>
+              <ul class="en">
+                <li>Supported the association manager with administrative and operational tasks</li>
+                <li>Designed official documents, meeting materials, and seminar papers</li>
+                <li>Managed the association's Facebook page and public communications</li>
+                <li>Organized annual general meetings, monthly meetings, and academic seminars</li>
+                <li>Coordinated with committee members, association members, and external organizations</li>
+              </ul>
+              <ul class="th">
+                <li>สนับสนุนงานธุรการและการดำเนินงานของผู้จัดการสมาคม</li>
+                <li>ออกแบบและจัดเตรียมเอกสารทางการ สื่อการประชุม และเอกสารสัมมนา</li>
+                <li>บริหารและอัปเดตเพจ Facebook ของสมาคม</li>
+                <li>จัดการประชุมใหญ่สามัญประจำปี การประชุมประจำเดือน และสัมมนาวิชาการ</li>
+                <li>ประสานงานกับกรรมการ สมาชิก และหน่วยงานภายนอก</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="cv-block">
+          <div class="section-label"><span class="en">Education</span><span class="th">การศึกษา</span></div>
+          <div class="edu-card">
+            <div class="edu-header">
+              <div class="edu-date">2023 – <span class="en">Present</span><span class="th">ปัจจุบัน</span></div>
+              <div class="edu-school"><span class="en">Chiang Mai University</span><span class="th">มหาวิทยาลัยเชียงใหม่</span></div>
+              <div class="edu-major">
+                <span class="en">B.F.A. Digital Game · College of Arts, Media and Technology (in progress)</span>
+                <span class="th">B.F.A. สาขา Digital Game · วิทยาลัยศิลปะ สื่อ และเทคโนโลยี (กำลังศึกษา)</span>
+              </div>
+            </div>
+            <div class="gpa-chip">
+              <b>3.33 / 4.00</b>
+              GPAX <span class="en">(Year 3, Semester 2)</span><span class="th">(ปีที่ 3 เทอม 2)</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /cv-right -->
+    </div><!-- /cv-grid -->
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO SECTION with TABS ===== -->
+<section class="portfolio-section" id="portfolio" style="background:var(--surface);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="portfolio-header">
+      <div class="portfolio-title"><span class="en">Portfolio</span><span class="th">ผลงาน</span></div>
+      <div class="portfolio-sub">
+        <span class="en">Explore projects grouped by core skills and the value they create</span>
+        <span class="th">สำรวจผลงานที่จัดกลุ่มตามทักษะหลักและคุณค่าที่สร้างขึ้น</span>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar" role="tablist">
+      <button class="tab-btn active" id="tab-world" role="tab" aria-selected="true" aria-controls="pane-world"
+        style="--tab-color:var(--game)">
+        <span class="tab-dot"></span>
+        <span class="en">World Building &amp; Env</span><span class="th">การสร้างโลกและสภาพแวดล้อม</span>
+      </button>
+      <button class="tab-btn" id="tab-art" role="tab" aria-selected="false" aria-controls="pane-art"
+        style="--tab-color:var(--game)">
+        <span class="tab-dot"></span>
+        <span class="en">Sprite &amp; Game Art</span><span class="th">ศิลปะเกมและสไปรต์</span>
+      </button>
+      <button class="tab-btn" id="tab-ui" role="tab" aria-selected="false" aria-controls="pane-ui"
+        style="--tab-color:var(--ux)">
+        <span class="tab-dot"></span>
+        <span class="en">Interface &amp; Interaction</span><span class="th">อินเทอร์เฟซและการโต้ตอบ</span>
+      </button>
+      <button class="tab-btn" id="tab-visual" role="tab" aria-selected="false" aria-controls="pane-visual"
+        style="--tab-color:var(--graphic)">
+        <span class="tab-dot"></span>
+        <span class="en">Visual Communication</span><span class="th">การสื่อสารด้วยภาพ</span>
+      </button>
+      <button class="tab-btn" id="tab-sys" role="tab" aria-selected="false" aria-controls="pane-sys"
+        style="--tab-color:var(--pm)">
+        <span class="tab-dot"></span>
+        <span class="en">Systems &amp; Operations</span><span class="th">ระบบและการดำเนินงาน</span>
+      </button>
+    </div>
+
+    <!-- ---- WORLD BUILDING PANE ---- -->
+    <div class="tab-pane active" id="pane-world" role="tabpanel" aria-labelledby="tab-world">
+      <div class="project-grid">
+
+        <div class="card">
+          <div class="card-img" data-full="images/gd_lighting.png"
+            data-cap-en="Post Process Volume composition with point lights designed as house lighting for realism."
+            data-cap-th="จัดองค์ประกอบด้วย Post Process Volume พร้อมจุดไฟแบบไฟบ้านจริงเพื่อความสมจริง">
+            <img src="images/gd_lighting.png" alt="Interior Environment & Lighting Design" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">01 — Unreal Engine</div>
+            <h3><span class="en">Interior Environment &amp; Lighting Design</span><span class="th">การออกแบบสภาพแวดล้อมภายในและแสง</span></h3>
+            <p class="sub"><span class="en">Architectural scale planning, material setup, and realistic lighting.</span><span class="th">การวางผังมาตราส่วนสถาปัตยกรรม การตั้งค่าวัสดุ และการจัดแสงสมจริง</span></p>
+            <p class="en">Planned room layouts and urban environments scaled accurately to the character. Designed the atmosphere using Post Process Volumes and carefully positioned point lights to simulate realistic house lighting. Implemented core systems using basic Blueprints.</p>
+            <p class="th">วางผังห้องและสภาพแวดล้อมเมืองให้ได้สัดส่วนกับตัวละคร ออกแบบบรรยากาศโดยใช้ Post Process Volumes และจัดวางจุดแสงเพื่อให้แสงสมจริงเหมือนบ้านทั่วไป รวมถึงติดตั้งระบบพื้นฐานด้วย Blueprints</p>
+            <div class="card-actions">
+              <a href="https://www.youtube.com/watch?v=nJu997SDpMs" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Watch Video
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/gd_island.png"
+            data-cap-en="A story-driven horror game — level layout and in-game regions for a linear horror experience told through exploration."
+            data-cap-th="เกมสยองขวัญแนวเล่าเรื่อง — วางผังด่านและพื้นที่ในเกมสำหรับประสบการณ์สยองขวัญเชิงเส้น">
+            <img src="images/gd_island.png" alt="Mysterious Island — Story-Driven Horror" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">02 — Unreal Engine</div>
+            <h3><span class="en">Mysterious Island — Story-Driven Horror</span><span class="th">เกาะลึกลับ — เกมสยองขวัญเน้นเนื้อเรื่อง</span></h3>
+            <p class="sub"><span class="en">Level layout, puzzle integration, and narrative pacing.</span><span class="th">การวางผังด่าน การผสานปริศนา และจังหวะการเล่าเรื่อง</span></p>
+            <p class="en">Designed a linear horror experience on an island where the narrative unfolds through exploration and reading notes. Responsible for level layouts, integrating puzzle mechanics, controlling game flow via Blueprints, and directing the cinematic opening sequence.</p>
+            <p class="th">ออกแบบประสบการณ์สยองขวัญแบบเส้นตรงบนเกาะที่เนื้อเรื่องดำเนินไปผ่านการสำรวจและการอ่านโน้ต รับผิดชอบการวางผังด่าน ใส่กลไกปริศนา ควบคุมโฟลว์เกมผ่าน Blueprints และกำกับฉากเปิดแบบซีเนมาติก</p>
+            <div class="card-actions">
+              <a href="https://www.youtube.com/watch?v=Bvr0cCFJ0WY" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Watch Video
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/gd_rockman1.png"
+            data-cap-en="Four distinct regions linked by portal gates; cool tones mark easier sections."
+            data-cap-th="4 โซนที่แตกต่างกัน เชื่อมด้วยประตูพอร์ทัล โทนสีเย็นแทนโซนง่าย">
+            <img src="images/gd_rockman1.png" alt="Platformer World & Level Design" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">03 — Unreal Engine</div>
+            <h3><span class="en">Platformer World &amp; Level Design</span><span class="th">การออกแบบโลกและด่านเกมแพลตฟอร์ม</span></h3>
+            <p class="sub"><span class="en">Difficulty progression, visual cues, and tutorial mechanics.</span><span class="th">การไล่ระดับความยาก การสื่อสารด้วยภาพ และกลไกสอนเล่น</span></p>
+            <p class="en">Designed a single stage separated into four distinct regions, connected via portal gates. Used color theory to communicate difficulty (e.g., cool tones for easier introductory areas). Implemented widget pop-ups for tutorials and save checkpoints to minimize player frustration upon death.</p>
+            <p class="th">ออกแบบด่านหนึ่งที่แบ่งออกเป็นสี่ภูมิภาค เชื่อมต่อกันผ่านพอร์ทัล ใช้ทฤษฎีสีในการสื่อสารถึงระดับความยาก (เช่น โทนสีเย็นสำหรับพื้นที่ง่ายช่วงเริ่มต้น) ติดตั้งป๊อปอัปสอนการเล่นและจุดเซฟเพื่อลดความหงุดหงิดเมื่อผู้เล่นตาย</p>
+            <div class="card-actions">
+              <a href="https://www.youtube.com/watch?v=dWGj9m3Efnk" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Watch Video
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/gd_rockman2_vr.png"
+            data-cap-en="Put Plate in the City, a VR cooking game using physics and Blueprints."
+            data-cap-th="Put Plate in the City เป็นเกม VR ทำอาหารสไตล์ 3D โลว์โพลี เน้นความเร็วและความแม่นยำ">
+            <img src="images/gd_rockman2_vr.png" alt="VR Cooking Game & Gameplay Mechanics" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">04 — Unreal Engine · VR</div>
+            <h3><span class="en">VR Cooking Game &amp; Gameplay Mechanics</span><span class="th">เกมทำอาหาร VR และกลไกเกมเพลย์</span></h3>
+            <p class="sub"><span class="en">Physics-based interactions, enemy behavior, and audio integration.</span><span class="th">ปฏิสัมพันธ์ผ่านฟิสิกส์ พฤติกรรมศัตรู และการผสานเสียง</span></p>
+            <p class="en">Developed "Put Plate in the City", a 3D low-poly VR cooking game focusing on speed during rush hour, heavily utilizing physics and Blueprints for ingredient handling. Additionally designed enemy behaviors (flying, pursuing) and an active-block mechanic for a separate platformer project.</p>
+            <p class="th">พัฒนา "Put Plate in the City" เกม VR ทำอาหาร 3D โลว์โพลี เน้นความเร็วในช่วงเวลาเร่งด่วน ใช้ระบบฟิสิกส์และ Blueprints ในการจัดการวัตถุดิบ นอกจากนี้ยังออกแบบพฤติกรรมศัตรู (บินไล่ล่า) และกลไกบล็อกแบบโต้ตอบสำหรับโปรเจกต์เกมแพลตฟอร์ม</p>
+            <div class="card-actions">
+              <a href="https://www.youtube.com/watch?v=3ofG1T-HcrM" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Watch Video
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /pane-world -->
+
+    <!-- ---- SPRITE & GAME ART PANE ---- -->
+    <div class="tab-pane" id="pane-art" role="tabpanel" aria-labelledby="tab-art">
+      <div class="project-grid">
+
+        <div class="card">
+          <div class="card-img" data-full="images/gd_char_enemy.png"
+            data-cap-en="Character design across projects — appearance, personality, and movement aligned with the game world."
+            data-cap-th="งานออกแบบตัวละครสำหรับหลายโปรเจกต์ เน้นรูปลักษณ์ บุคลิก และการเคลื่อนไหว">
+            <img src="images/gd_char_enemy.png" alt="Character, Sprite & Enemy Design" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">01 — 2D Pixel Art</div>
+            <h3><span class="en">Character, Sprite &amp; Enemy Design</span><span class="th">ออกแบบตัวละคร สไปรต์ และศัตรู</span></h3>
+            <p class="sub"><span class="en">Animation sheets, identity through visuals, and UI integration.</span><span class="th">สไปรต์ชีตแอนิเมชัน อัตลักษณ์ผ่านภาพ และการผสาน UI</span></p>
+            <p class="en">Designed main characters and five distinct enemy types, defining appearance, personality, and movement style to fit the narrative. Created complete sprite sheets for multi-directional walking, running, jumping, and conversational expressions, alongside core UI buttons.</p>
+            <p class="th">ออกแบบตัวละครหลักและศัตรู 5 แบบ กำหนดรูปลักษณ์ บุคลิก และสไตล์การเคลื่อนไหวให้เข้ากับเนื้อเรื่อง สร้างสไปรต์ชีตครบวงจรสำหรับการเดินหลากทิศทาง วิ่ง กระโดด และสีหน้าเวลาพูดคุย พร้อมกับออกแบบปุ่ม UI พื้นฐาน</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/gd_asset_poster.png"
+            data-cap-en="3D assets with proper scale, 2.5D top-down tile maps, and pixel art in-game items."
+            data-cap-th="ชิ้นงาน 3D ที่ได้สัดส่วน ผังไทล์ 2.5D ท็อปดาวน์ และไอเทมพิกเซลอาร์ต">
+            <img src="images/gd_asset_poster.png" alt="Game Assets, Map Tiles & Poster Art" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">02 — 2.5D · 3D · Illustration</div>
+            <h3><span class="en">Game Assets, Map Tiles &amp; Poster Art</span><span class="th">อาร์ตเวิร์กเกม ชิ้นงาน และแผนที่</span></h3>
+            <p class="sub"><span class="en">In-game items, dimensional control, and promotional key art.</span><span class="th">ไอเทมในเกม การควบคุมมิติ และภาพโปรโมต</span></p>
+            <p class="en">Produced 3D assets mapped to gameplay scale, clear 2.5D top-down tile maps, and pixel art items ensuring a consistent visual system. Illustrated hand-drawn concepts and designed promotional posters for titles like 'Lost in Sauce' and 'The Silence' to attract target audiences.</p>
+            <p class="th">ผลิตชิ้นงาน 3D ตามสัดส่วนเกมเพลย์ ผังแผนที่ 2.5D ท็อปดาวน์ที่ดูง่าย และไอเทมพิกเซลอาร์ตที่คุมโทนระบบภาพ วาดภาพสเก็ตช์แนวคิด และออกแบบโปสเตอร์โปรโมตเกมอย่าง 'Lost in Sauce' และ 'The Silence' เพื่อดึงดูดกลุ่มเป้าหมาย</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/gr_parallax.png"
+            data-cap-en="A parallax illustration of a small dog running around Ang Kaew Reservoir, Chiang Mai University."
+            data-cap-th="ภาพประกอบ Parallax ของ 'หมาน้อย' วิ่งเล่นรอบอ่างแก้ว มหาวิทยาลัยเชียงใหม่">
+            <img src="images/gr_parallax.png" alt="Parallax Pixel Art & Isometric Design" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">03 — Pixel Art · Isometric</div>
+            <h3><span class="en">Parallax Pixel Art &amp; Isometric Design</span><span class="th">พิกเซลอาร์ตแบบ Parallax และ Isometric</span></h3>
+            <p class="sub"><span class="en">Multi-layered motion, spatial organization, and UI systems.</span><span class="th">การเคลื่อนไหวแบบหลายเลเยอร์ การจัดวางพื้นที่ และระบบ UI</span></p>
+            <p class="en">Developed an isometric dinosaur character highlighting spatial organization and dimensional control in 2D space. Created a multi-layered parallax pixel art scene of Ang Kaew Reservoir. Also designed discrete stamina and skill systems presented in distinct pixel art styles.</p>
+            <p class="th">พัฒนาตัวละครไดโนเสาร์แบบไอโซเมตริก เน้นการจัดวางมิติพื้นที่ในงาน 2D สร้างฉากพิกเซลอาร์ตอ่างแก้วแบบ Parallax หลายเลเยอร์ และออกแบบระบบแถบพลังกับสกิลในสไตล์พิกเซลอาร์ตที่ต่างกันตามโทนเกม</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/gr_tshirt.png"
+            data-cap-en="Board game card design and logo concepts demonstrating visual storytelling."
+            data-cap-th="การออกแบบการ์ดบอร์ดเกมและแนวคิดโลโก้ที่แสดงถึงการเล่าเรื่องด้วยภาพ">
+            <img src="images/gr_tshirt.png" alt="Board Game Cards & Identity Design" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">04 — Vector · Branding</div>
+            <h3><span class="en">Board Game Cards &amp; Identity Design</span><span class="th">การออกแบบการ์ดบอร์ดเกมและโลโก้</span></h3>
+            <p class="sub"><span class="en">Visual rules, symbolism, and brand narrative.</span><span class="th">กฎเกณฑ์ทางภาพ สัญลักษณ์ และการเล่าเรื่องของแบรนด์</span></p>
+            <p class="en">Designed a social deduction board game where role systems (Innocent Duck vs Evil Pigeon) are communicated purely through color-coded cards and symbols, minimizing text. Designed brand logos utilizing color psychology, continuous curves, and simplicity to control mood and structure.</p>
+            <p class="th">ออกแบบการ์ดสำหรับบอร์ดเกมแนวคาดเดาบทบาท (เป็ด vs นกพิราบ) สื่อสารระบบเกมผ่านสีการ์ดและสัญลักษณ์เพื่อลดการใช้ตัวอักษร และออกแบบโลโก้แบรนด์โดยใช้จิตวิทยาของสี เส้นโค้งต่อเนื่อง และความเรียบง่ายในการคุมอารมณ์</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /pane-art -->
+
+    <!-- ---- INTERFACE & INTERACTION PANE ---- -->
+    <div class="tab-pane" id="pane-ui" role="tabpanel" aria-labelledby="tab-ui">
+      <div class="project-grid">
+
+        <div class="card">
+          <div class="card-img" data-full="images/ux_skillscreen.png"
+            data-cap-en="Interactive login screen built as a Figma prototype supporting scrolling and page navigation."
+            data-cap-th="หน้า Login แบบอินเทอร์แอกทีฟด้วย Figma Prototype รองรับการเลื่อนหน้าจอและการเปลี่ยนหน้า">
+            <img src="images/ux_skillscreen.png" alt="Interactive Prototyping & Skill Screen UI" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">01 — Figma</div>
+            <h3><span class="en">Interactive Prototyping &amp; Skill Screen UI</span><span class="th">การทำต้นแบบ Interactive และ UI หน้าสกิล</span></h3>
+            <p class="sub"><span class="en">User flows, layout components, and prototype testing.</span><span class="th">โฟลว์ผู้ใช้ องค์ประกอบการจัดวาง และการทดสอบต้นแบบ</span></p>
+            <p class="en">Built an interactive login screen using Figma to simulate scrolling, button interactions, and navigation based on predefined user flows. Designed a complex skill-sorting interface within a game, focusing on the layout of skill positions and UI component separation for improved usability.</p>
+            <p class="th">สร้างหน้าเข้าสู่ระบบแบบโต้ตอบบน Figma เพื่อจำลองการเลื่อน การกดปุ่ม และการนำทางตาม User Flow ที่กำหนด ออกแบบอินเทอร์เฟซอัปเกรดสกิลซับซ้อนในเกม เน้นการจัดวางตำแหน่งสกิลและการแยกส่วน UI เพื่อให้ใช้งานง่าย</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/ux_trybefore.png"
+            data-cap-en="UX/UI for a try-before-you-buy playable ad, using the Peak-End Rule and fast UI feedback."
+            data-cap-th="ออกแบบ UX/UI สำหรับ Playable Ads แบบ Try-before-you-buy ใช้ Peak-End Rule และ UI Feedback">
+            <img src="images/ux_trybefore.png" alt="LoverCrossy — Playable Ads UX/UI" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">02 — Playable Ads</div>
+            <h3><span class="en">LoverCrossy — Playable Ads UX/UI</span><span class="th">LoverCrossy — UX/UI สำหรับ Playable Ads</span></h3>
+            <p class="sub"><span class="en">Peak-End rule, micro-interactions, and conversion optimization.</span><span class="th">กฎ Peak-End, ไมโครอินเทอร์แอ็กชัน และการเพิ่มคอนเวอร์ชัน</span></p>
+            <p class="en">Applied the Peak-End Rule to design UX/UI for a fast-paced "try-before-you-buy" playable ad. Crafted 2.5D assets, lighting cues, and fast responsive UI feedback to guide player attention and decision-making within 15 seconds, maximizing the installation rate.</p>
+            <p class="th">ใช้กฎ Peak-End ในการออกแบบ UX/UI สำหรับโฆษณาเกมแบบเล่นได้จริง (Playable Ads) จังหวะเร็ว สร้างชิ้นงาน 2.5D แสงนำสายตา และ UI ที่ตอบสนองไวเพื่อนำทางผู้เล่นให้ตัดสินใจได้ใน 15 วินาที หวังผลเพิ่มยอดติดตั้งสูงสุด</p>
+            <div class="card-actions">
+              <a href="https://kennys27.itch.io/lovercrossy" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                Play Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/pm_meetingportal.png"
+            data-cap-en="Designed a portal concept so registration, meeting details, and voting are reachable from a single link."
+            data-cap-th="ออกแบบแนวคิดพอร์ทัลให้เข้าถึงการลงทะเบียน รายละเอียดประชุม และการโหวตได้ภายในลิงก์เดียว">
+            <img src="images/pm_meetingportal.png" alt="Digital Meeting Portal UX" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">03 — Web Portal Design</div>
+            <h3><span class="en">Digital Meeting Portal UX</span><span class="th">UX พอร์ทัลการประชุมดิจิทัล</span></h3>
+            <p class="sub"><span class="en">Information architecture, journey simplification, and CTA layout.</span><span class="th">สถาปัตยกรรมข้อมูล การย่อขั้นตอน และเลย์เอาต์ปุ่ม CTA</span></p>
+            <p class="en">Addressed the friction of scattered presentation slides and confusing file names during meetings. Designed a centralized digital portal where registration, meeting details, and real-time voting are seamlessly accessible from a single link, utilizing clear CTA buttons to guide the user journey.</p>
+            <p class="th">แก้ปัญหาเอกสารพรีเซนเทชันกระจัดกระจายและสับสนในช่วงเวลาประชุม ออกแบบเว็บพอร์ทัลศูนย์กลางที่รวบรวมการลงทะเบียน รายละเอียด และการโหวตเรียลไทม์ไว้ในลิงก์เดียว ใช้ปุ่ม CTA ชัดเจนเพื่อนำทางผู้ใช้งาน</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/ux_enderlilies.png"
+            data-cap-en="Redesigned UI components based on a given reference (Ender Lilies)."
+            data-cap-th="ออกแบบ UI Component ตามโจทย์ที่กำหนด (Ender Lilies)">
+            <img src="images/ux_enderlilies.png" alt="Ender Lilies — UI Redesign Study" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">04 — Figma</div>
+            <h3><span class="en">Ender Lilies — UI Redesign Study</span><span class="th">Ender Lilies — กรณีศึกษาการรีดีไซน์ UI</span></h3>
+            <p class="sub"><span class="en">Visual hierarchy, transparency tuning, and stylistic matching.</span><span class="th">ลำดับชั้นของภาพ การปรับความโปร่งใส และการคุมสไตล์ภาพ</span></p>
+            <p class="en">Recreated and refined UI components based on the Ender Lilies reference. Carefully adjusted lighting, shadows, and panel transparency so the interface feels fully integrated into the game's dark fantasy atmosphere without compromising usability or readability.</p>
+            <p class="th">สร้างและปรับปรุง UI Components โดยอ้างอิงจากเกม Ender Lilies ปรับทอนแสง เงา และความโปร่งใสของแผงเมนูอย่างละเอียด เพื่อให้อินเทอร์เฟซกลมกลืนกับบรรยากาศดาร์กแฟนตาซีของเกม โดยไม่เสียเรื่องการอ่านและใช้งานง่าย</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /pane-ui -->
+
+    <!-- ---- VISUAL COMMUNICATION PANE ---- -->
+    <div class="tab-pane" id="pane-visual" role="tabpanel" aria-labelledby="tab-visual">
+      <div class="project-grid">
+
+        <div class="card">
+          <div class="card-img" data-full="images/gr_video_graphic.png"
+            data-cap-en="Video editing for a YouTube channel, plus restaurant branding and seminar posters."
+            data-cap-th="ตัดต่อวิดีโอให้ช่อง YouTube พร้อมงานออกแบบแบรนด์ร้านอาหารและโปสเตอร์สัมมนา">
+            <img src="images/gr_video_graphic.png" alt="Video Editing & Commercial Graphic Design" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">01 — Premiere Pro · Illustrator</div>
+            <h3><span class="en">Video Editing &amp; Commercial Graphic Design</span><span class="th">การตัดต่อวิดีโอและกราฟิกเชิงพาณิชย์</span></h3>
+            <p class="sub"><span class="en">Pacing, layout composition, and branding materials.</span><span class="th">จังหวะการเล่าเรื่อง การจัดเลย์เอาต์ และสื่อสร้างแบรนด์</span></p>
+            <p class="en">Edited videos for a YouTube channel, mastering visual pacing, removing dead air, and integrating sound/effects. Delivered graphic design services for restaurants and associations, producing engaging vinyl banners, structured menus, and conference seminar announcements.</p>
+            <p class="th">ตัดต่อวิดีโอช่อง YouTube โดยคุมจังหวะภาพ ตัดช่วงเดดแอร์ และผสานเสียงเอฟเฟกต์ ให้บริการออกแบบกราฟิกสำหรับร้านอาหารและสมาคม ผลิตป้ายไวนิลดึงดูดสายตา เมนูที่จัดโครงสร้างชัดเจน และโปสเตอร์สัมมนาทางวิชาการ</p>
+          </div>
+        </div>
+
+        <div class="card" style="background:#1d1d22;border-color:#2c2c33;color:#fff">
+          <div class="card-img" style="background:#111;border-bottom-color:#2c2c33;padding:0">
+            <img src="images/profile_photo.png" style="opacity:0.6;filter:grayscale(1) contrast(1.2)" alt="AI Animation Workflow" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index" style="color:var(--accent)">02 — Generative AI · Pipeline</div>
+            <h3 style="color:#fff"><span class="en">AI Animation Production Pipeline</span><span class="th">กระบวนการผลิตแอนิเมชันด้วย AI</span></h3>
+            <p class="sub" style="color:#a1a1aa"><span class="en">Pre-production, prompt engineering, and compositing.</span><span class="th">พรีโปรดักชัน การเขียนพรอมต์ และการคอมโพสิต</span></p>
+            <p class="en" style="color:#d4d4d8">End-to-end capability in generating AI-driven animations. The workflow spans pre-animation (concept, script, storyboard design), generation (prompt engineering, motion consistency control), and post-production (compositing, VFX, and final editing).</p>
+            <p class="th" style="color:#d4d4d8">ความสามารถเต็มรูปแบบในการสร้างแอนิเมชันด้วย AI กระบวนการครอบคลุมตั้งแต่พรีโปรดักชัน (แนวคิด สคริปต์ สตอรีบอร์ด) การเจนภาพ (การเขียนพรอมต์ คุมความต่อเนื่อง) และโพสต์โปรดักชัน (คอมโพสิต เอฟเฟกต์ภาพ และการตัดต่อไฟนอล)</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /pane-visual -->
+
+    <!-- ---- SYSTEMS & OPERATIONS PANE ---- -->
+    <div class="tab-pane" id="pane-sys" role="tabpanel" aria-labelledby="tab-sys">
+      <div class="project-grid">
+
+        <div class="card">
+          <div class="card-img" data-full="images/pm_seminar1.png"
+            data-cap-en="Redesigned the registration flow using Google Forms so staff could see real-time headcounts."
+            data-cap-th="ออกแบบ Flow การลงทะเบียนใหม่ด้วย Google Forms ให้เจ้าหน้าที่เห็นข้อมูลเรียลไทม์">
+            <img src="images/pm_seminar1.png" alt="Registration Systems & Member Data" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">01 — Data Management</div>
+            <h3><span class="en">Registration Systems &amp; Member Data</span><span class="th">ระบบลงทะเบียนและข้อมูลสมาชิก</span></h3>
+            <p class="sub"><span class="en">Workflow optimization, online forms, and data accuracy.</span><span class="th">การปรับกระบวนการทำงาน ฟอร์มออนไลน์ และความแม่นยำ</span></p>
+            <p class="en">Migrated manual, paper-based registration into a real-time online flow. Designed a systematic process (link → confirm → verify → database → email) for seminars and corporate memberships, allowing staff to analyze target groups and maintain official-ready records.</p>
+            <p class="th">ย้ายการลงทะเบียนแบบแมนนวลด้วยกระดาษสู่ระบบออนไลน์เรียลไทม์ ออกแบบกระบวนการเป็นระบบ (ลิงก์ → ยืนยัน → ตรวจสอบ → ฐานข้อมูล → อีเมล) สำหรับงานสัมมนาและสมาชิกนิติบุคคล ช่วยให้เจ้าหน้าที่วิเคราะห์กลุ่มเป้าหมายและจัดเก็บข้อมูลได้อย่างถูกต้อง</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/pm_studyvisit.png"
+            data-cap-en="Coordinated an industrial study visit on steel structure construction in Ho Chi Minh City, Vietnam."
+            data-cap-th="ประสานงานโครงการศึกษาดูงานอุตสาหกรรม ณ นครโฮจิมินห์ เวียดนาม">
+            <img src="images/pm_studyvisit.png" alt="International Study Visit Operations" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">02 — Stakeholder Management</div>
+            <h3><span class="en">International Study Visit Operations</span><span class="th">บริหารจัดการงานศึกษาดูงานต่างประเทศ</span></h3>
+            <p class="sub"><span class="en">Cross-border coordination, logistics planning, and reporting.</span><span class="th">การประสานงานข้ามประเทศ การวางแผนโลจิสติกส์ และทำรายงาน</span></p>
+            <p class="en">Managed operations for an industrial study visit on steel structures in Vietnam for 15 participants. Handled end-to-end logistics: planning the trip, tracking participant data, managing financial/registration documents, coordinating with foreign companies, and producing the final report.</p>
+            <p class="th">จัดการดำเนินงานโครงการศึกษาดูงานโครงสร้างเหล็กในเวียดนามสำหรับ 15 ท่าน ดูแลโลจิสติกส์ตั้งแต่ต้นจนจบ: วางแผนการเดินทาง ติดตามข้อมูล จัดทำเอกสารลงทะเบียน/การเงิน ประสานงานกับบริษัทต่างประเทศ และทำรายงานสรุป</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/pm_golf.png"
+            data-cap-en="Managed the association's golf tournament sponsorship program — sponsor database, financial documents, PR."
+            data-cap-th="บริหารโครงการสนับสนุนการแข่งขันกอล์ฟของสมาคม ดูแลฐานข้อมูลผู้สนับสนุน เอกสารการเงิน และสื่อประชาสัมพันธ์">
+            <img src="images/pm_golf.png" alt="Corporate Sponsorship & Event Management" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">03 — Event Operations</div>
+            <h3><span class="en">Corporate Sponsorship &amp; Event Management</span><span class="th">บริหารสปอนเซอร์และการจัดงานอีเวนต์</span></h3>
+            <p class="sub"><span class="en">Sponsor relations, database tracking, and on-site logistics.</span><span class="th">ความสัมพันธ์สปอนเซอร์ การติดตามฐานข้อมูล และโลจิสติกส์หน้างาน</span></p>
+            <p class="en">Managed a corporate golf tournament sponsorship program to build business relations. Created and tracked sponsor databases, coordinated seamlessly with the golf course venue, handled financial documentation, and ensured all PR materials and on-site signage were delivered.</p>
+            <p class="th">บริหารโครงการสปอนเซอร์การแข่งขันกอล์ฟเพื่อสร้างความสัมพันธ์ทางธุรกิจ จัดทำและติดตามฐานข้อมูลผู้สนับสนุน ประสานงานกับสนามกอล์ฟอย่างราบรื่น จัดการเอกสารการเงิน และดูแลสื่อประชาสัมพันธ์รวมถึงป้ายหน้างานให้พร้อม</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img" data-full="images/gd_activity.png"
+            data-cap-en="Supported event activities and on-site organization at Global Game Jam Chiang Mai 2025."
+            data-cap-th="สนับสนุนกิจกรรมและดูแลความเรียบร้อยหน้างานใน Global Game Jam Chiang Mai 2025">
+            <img src="images/gd_activity.png" alt="Global Game Jam 2025 On-Site Coordination" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-index">04 — Activity</div>
+            <h3><span class="en">Global Game Jam 2025 On-Site Coordination</span><span class="th">ประสานงานหน้างาน Global Game Jam 2025</span></h3>
+            <p class="sub"><span class="en">Crisis management, facilitation, and teamwork.</span><span class="th">การจัดการภาวะวิกฤต การอำนวยความสะดวก และการทำงานเป็นทีม</span></p>
+            <p class="en">Acted as core staff for GGJCM 2025, maintaining on-site organization and resolving ad-hoc issues. Facilitated a smooth environment so game developers could focus entirely on creation, demonstrating strong responsibility and communication in high-pressure situations.</p>
+            <p class="th">ทำหน้าที่สตาฟหลักในงาน GGJCM 2025 ดูแลความเรียบร้อยหน้างานและแก้ปัญหาเฉพาะหน้า อำนวยความสะดวกให้ผู้พัฒนาเกมโฟกัสกับการสร้างสรรค์ได้อย่างเต็มที่ แสดงถึงความรับผิดชอบและการสื่อสารที่ดีในสถานการณ์กดดัน</p>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /pane-sys -->
+
+  </div><!-- /wrap -->
+</section>
+
+<!-- ===== CONTACT ===== -->
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2><span class="en">Let's Work Together</span><span class="th">มาร่วมงานกันเถอะ</span></h2>
+    <p class="sub">
+      <span class="en">Open to opportunities in Game Design, UX/UI, Graphic Design, and Project Coordination. Feel free to reach out.</span>
+      <span class="th">เปิดรับโอกาสในสายงาน Game Design, UX/UI, Graphic Design และการประสานงานโครงการ ยินดีให้ติดต่อได้เลย</span>
+    </p>
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:nawanan_k@cmu.ac.th">
+        <div class="label"><span class="en">Email</span><span class="th">อีเมล</span></div>
+        <div class="value">nawanan_k@cmu.ac.th</div>
+      </a>
+      <a class="contact-item" href="tel:0931657171">
+        <div class="label"><span class="en">Phone</span><span class="th">โทรศัพท์</span></div>
+        <div class="value">093-165-7171</div>
+      </a>
+      <div class="contact-item" style="cursor:default">
+        <div class="label"><span class="en">Location</span><span class="th">ที่อยู่</span></div>
+        <div class="value"><span class="en">Chiang Mai, Thailand</span><span class="th">เชียงใหม่, ไทย</span></div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span><span class="en">© 2026 Nawanan Khaunsamakhom. All rights reserved.</span><span class="th">© 2026 นวนันท์ ขุนสามารถ สงวนลิขสิทธิ์</span></span>
+      <span><span class="en">Built with care in Chiang Mai</span><span class="th">สร้างสรรค์ด้วยใจจากเชียงใหม่</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-cap" id="lightboxCap"></div>
+</div>
+
+<script>
+  // Language toggle
+  const html = document.documentElement;
+  const btnEN = document.getElementById('btnEN');
+  const btnTH = document.getElementById('btnTH');
+  function setLang(lang){
+    html.setAttribute('data-lang',lang);
+    html.setAttribute('lang',lang==='th'?'th':'en');
+    btnEN.classList.toggle('active',lang==='en');
+    btnTH.classList.toggle('active',lang==='th');
+    try{localStorage.setItem('portfolio-lang',lang);}catch(e){}
+    if(lightbox.classList.contains('open') && lightbox._activeEl) updateLightboxCaption(lightbox._activeEl);
+  }
+  btnEN.addEventListener('click',()=>setLang('en'));
+  btnTH.addEventListener('click',()=>setLang('th'));
+  try{const s=localStorage.getItem('portfolio-lang');if(s==='th')setLang('th');}catch(e){}
+
+  // Tab system
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+  tabBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      tabBtns.forEach(b=>{b.classList.remove('active');b.setAttribute('aria-selected','false')});
+      tabPanes.forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      document.getElementById(btn.getAttribute('aria-controls')).classList.add('active');
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCap = document.getElementById('lightboxCap');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function updateLightboxCaption(el){
+    const lang = html.getAttribute('data-lang');
+    lightboxCap.textContent = lang==='th' ? el.dataset.capTh : el.dataset.capEn;
+  }
+
+  document.querySelectorAll('.card-img').forEach(el=>{
+    el.addEventListener('click',()=>{
+      lightboxImg.src = el.dataset.full;
+      lightbox._activeEl = el;
+      updateLightboxCaption(el);
+      lightbox.classList.add('open');
+    });
+  });
+
+  lightboxClose.addEventListener('click',()=>lightbox.classList.remove('open'));
+  lightbox.addEventListener('click',(e)=>{if(e.target===lightbox)lightbox.classList.remove('open')});
+  document.addEventListener('keydown',(e)=>{if(e.key==='Escape')lightbox.classList.remove('open')});
+</script>
+</body>
+</html>
