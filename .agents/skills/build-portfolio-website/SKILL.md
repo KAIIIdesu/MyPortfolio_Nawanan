@@ -86,7 +86,7 @@ Use this content order unless the existing content justifies an adjustment:
 9. Contact
 10. Footer
 
-Do not include the AOT Iceberg project unless explicitly requested.
+Do not include confidential projects unless the owner explicitly approves them for publication.
 ```
 
 ## 6. Case‑Study Structure

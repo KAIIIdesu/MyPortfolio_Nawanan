@@ -328,6 +328,7 @@
     .tab-btn{padding:10px 14px;font-size:13px}
   }
 </style>
+<link rel="stylesheet" href="css/ponyoai.css">
 </head>
 <body>
 
@@ -567,6 +568,26 @@
         <span class="th">สำรวจผลงานที่จัดกลุ่มตามทักษะหลักและคุณค่าที่สร้างขึ้น</span>
       </div>
     </div>
+
+    <!-- PonyoAI featured project -->
+    <article class="py-feature" id="ponyoai-feature" aria-labelledby="ponyo-feature-title">
+      <div><p class="py-kicker"><span class="en">Featured Project</span><span class="th">โปรเจกต์เด่น</span></p>
+        <h2 id="ponyo-feature-title">PonyoAI — <span class="en">Agentic AI Personal Assistant</span><span class="th">ผู้ช่วยส่วนตัวแบบ Agentic AI</span></h2>
+        <p class="py-headline"><span class="en">One message.<br>The right workflow.</span><span class="th">ข้อความเดียว<br>สู่เวิร์กโฟลว์ที่ใช่</span></p><p class="py-description"><span class="en">PonyoAI organizes everyday requests into structured workflows, using fixed logic for predictable tasks and AI when language understanding is needed.</span><span class="th">PonyoAI จัดคำขอในชีวิตประจำวันเป็นเวิร์กโฟลว์ที่มีโครงสร้าง ใช้ตรรกะที่กำหนดไว้สำหรับงานที่คาดเดาได้ และใช้ AI เมื่อต้องเข้าใจภาษา</span></p><span class="py-status"><span class="en">Working Prototype · Ongoing</span><span class="th">ต้นแบบที่ใช้งานได้ · กำลังพัฒนาต่อเนื่อง</span></span><ul class="py-tags" aria-label="Technology stack"><li>Python</li><li>Discord</li><li>Notion</li><li>Gemini</li></ul>
+      </div><figure class="py-demo">
+      <div class="py-demo-bar"><span class="py-hash" aria-hidden="true">#</span><span>ponyo-assistant</span><span class="py-demo-platform">Discord</span></div>
+      <div class="py-chat">
+        <div class="py-message"><span class="py-avatar py-user" aria-hidden="true">U</span><div><b><span class="en">User</span><span class="th">ผู้ใช้</span></b><p class=""><span class="en">List my tasks.</span><span class="th">ขอดูรายการงานของฉัน</span></p></div></div>
+        <div class="py-message"><span class="py-avatar" aria-hidden="true">P</span><div><b>PonyoAI</b><span class="py-app">APP</span><p class=""><span class="en">Here are your current tasks</span><span class="th">รายการงานปัจจุบันของคุณ</span></p>
+          <ol><li><span class="en">Review English resume</span><span class="th">ตรวจทานเรซูเม่ภาษาอังกฤษ</span></li><li><span class="en">Update PonyoAI documentation</span><span class="th">อัปเดตเอกสาร PonyoAI</span></li><li><span class="en">Prepare internship application</span><span class="th">เตรียมใบสมัครฝึกงาน</span></li></ol>
+        </div></div>
+      </div>
+      <ul class="py-annotations"><li><span class="en">Request recognized</span><span class="th">รู้จักคำขอ</span></li><li><span class="en">AI provider skipped</span><span class="th">ข้ามผู้ให้บริการ AI</span></li><li><span class="en">Structured result returned</span><span class="th">ส่งผลลัพธ์ที่มีโครงสร้าง</span></li></ul>
+      <figcaption><span class="en">Illustrative interface using dummy data</span><span class="th">ภาพจำลองอินเทอร์เฟซโดยใช้ข้อมูลสมมติ</span></figcaption>
+    </figure>
+      <div class="py-feature-bottom"><p class="py-evidence"><span class="en">Verified task-list path: <strong>0 AI-provider calls · 1 Notion query</strong></span><span class="th">เส้นทางรายการงานที่ตรวจสอบแล้ว: <strong>เรียก AI 0 ครั้ง · สืบค้น Notion 1 ครั้ง</strong></span></p>
+      <a class="py-button" href="ponyoai.html"><span class="en">View Case Study</span><span class="th">ดูกรณีศึกษา</span> <span aria-hidden="true">↗</span></a></div>
+    </article>
 
     <!-- Tab Bar -->
     <div class="tab-bar" role="tablist">
@@ -865,6 +886,7 @@
 
     <!-- ---- SYSTEMS & OPERATIONS PANE ---- -->
     <div class="tab-pane" id="pane-sys" role="tabpanel" aria-labelledby="tab-sys">
+      <p class="py-context"><a href="ponyoai.html"><span class="en">PonyoAI · Featured AI automation project · View case study</span><span class="th">PonyoAI · โปรเจกต์เด่นด้าน AI automation · ดูกรณีศึกษา</span> <span aria-hidden="true">↗</span></a></p>
       <div class="project-grid">
 
         <div class="card">
@@ -874,7 +896,7 @@
             <img src="images/pm_seminar1.png" alt="Registration Systems & Member Data" loading="lazy">
           </div>
           <div class="card-body">
-            <div class="card-index">01 — Data Management</div>
+            <div class="card-index">02 — Data Management</div>
             <h3><span class="en">Registration Systems &amp; Member Data</span><span class="th">ระบบลงทะเบียนและข้อมูลสมาชิก</span></h3>
             <p class="sub"><span class="en">Workflow optimization, online forms, and data accuracy.</span><span class="th">การปรับกระบวนการทำงาน ฟอร์มออนไลน์ และความแม่นยำ</span></p>
             <p class="en">Migrated manual, paper-based registration into a real-time online flow. Designed a systematic process (link → confirm → verify → database → email) for seminars and corporate memberships, allowing staff to analyze target groups and maintain official-ready records.</p>
@@ -889,7 +911,7 @@
             <img src="images/pm_studyvisit.png" alt="International Study Visit Operations" loading="lazy">
           </div>
           <div class="card-body">
-            <div class="card-index">02 — Stakeholder Management</div>
+            <div class="card-index">03 — Stakeholder Management</div>
             <h3><span class="en">International Study Visit Operations</span><span class="th">บริหารจัดการงานศึกษาดูงานต่างประเทศ</span></h3>
             <p class="sub"><span class="en">Cross-border coordination, logistics planning, and reporting.</span><span class="th">การประสานงานข้ามประเทศ การวางแผนโลจิสติกส์ และทำรายงาน</span></p>
             <p class="en">Managed operations for an industrial study visit on steel structures in Vietnam for 15 participants. Handled end-to-end logistics: planning the trip, tracking participant data, managing financial/registration documents, coordinating with foreign companies, and producing the final report.</p>
@@ -904,7 +926,7 @@
             <img src="images/pm_golf.png" alt="Corporate Sponsorship & Event Management" loading="lazy">
           </div>
           <div class="card-body">
-            <div class="card-index">03 — Event Operations</div>
+            <div class="card-index">04 — Event Operations</div>
             <h3><span class="en">Corporate Sponsorship &amp; Event Management</span><span class="th">บริหารสปอนเซอร์และการจัดงานอีเวนต์</span></h3>
             <p class="sub"><span class="en">Sponsor relations, database tracking, and on-site logistics.</span><span class="th">ความสัมพันธ์สปอนเซอร์ การติดตามฐานข้อมูล และโลจิสติกส์หน้างาน</span></p>
             <p class="en">Managed a corporate golf tournament sponsorship program to build business relations. Created and tracked sponsor databases, coordinated seamlessly with the golf course venue, handled financial documentation, and ensured all PR materials and on-site signage were delivered.</p>
@@ -919,7 +941,7 @@
             <img src="images/gd_activity.png" alt="Global Game Jam 2025 On-Site Coordination" loading="lazy">
           </div>
           <div class="card-body">
-            <div class="card-index">04 — Activity</div>
+            <div class="card-index">05 — Activity</div>
             <h3><span class="en">Global Game Jam 2025 On-Site Coordination</span><span class="th">ประสานงานหน้างาน Global Game Jam 2025</span></h3>
             <p class="sub"><span class="en">Crisis management, facilitation, and teamwork.</span><span class="th">การจัดการภาวะวิกฤต การอำนวยความสะดวก และการทำงานเป็นทีม</span></p>
             <p class="en">Acted as core staff for GGJCM 2025, maintaining on-site organization and resolving ad-hoc issues. Facilitated a smooth environment so game developers could focus entirely on creation, demonstrating strong responsibility and communication in high-pressure situations.</p>
@@ -998,6 +1020,23 @@
       document.getElementById(btn.getAttribute('aria-controls')).classList.add('active');
     });
   });
+
+  // Direct tab links, e.g. cv.html#systems
+  const tabHashes = {world:'tab-world', art:'tab-art', interface:'tab-ui', visual:'tab-visual', systems:'tab-sys'};
+  function openTabFromHash(){
+    const tabId = tabHashes[location.hash.slice(1).toLowerCase()];
+    if(!tabId) return;
+    const tab = document.getElementById(tabId);
+    tab.click();
+    // Jump instantly: the page-wide smooth scrolling can swallow a scroll started during load
+    html.style.scrollBehavior = 'auto';
+    tab.scrollIntoView({block:'nearest', inline:'center'}); // narrow screens: bring the tab into the sideways-scrolling tab bar
+    document.getElementById('portfolio').scrollIntoView();
+    html.style.scrollBehavior = '';
+  }
+  openTabFromHash();
+  addEventListener('load',openTabFromHash);
+  addEventListener('hashchange',openTabFromHash);
 
   // Lightbox
   const lightbox = document.getElementById('lightbox');

@@ -1,0 +1,40 @@
+/* PonyoAI: scoped presentation shared by the portfolio feature and case study. */
+.py-feature,.py-case{--py-accent:#5155cf;--py-muted:#595962;--py-line:#e1dfda;--py-tint:#efeffb;--py-ink:#19191f;color:var(--py-ink)}
+.py-feature *,.py-case *{box-sizing:border-box}
+.py-feature [class],.py-case [class]{min-width:0}
+.py-feature{scroll-margin-top:90px;margin-top:26px;padding:19px 32px;background:#faf9f7;border:1px solid var(--py-line);border-radius:20px;display:grid;grid-template-columns:1fr 1.06fr;gap:12px 34px;align-items:center}
+.py-kicker{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--py-accent);margin:0 0 10px}
+.py-feature h2{font-size:16px;font-weight:750;line-height:1.35;margin:0 0 8px;letter-spacing:-.02em}
+.py-feature .py-headline{font-size:36px;line-height:1.08;letter-spacing:-.045em;font-weight:850;margin:0 0 12px}
+.py-description{font-size:14px;line-height:1.65;color:var(--py-muted);margin:0 0 14px;max-width:57ch}
+.py-status{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;line-height:1.5;color:#805014;margin:0 0 10px}
+.py-status:before{content:'';width:7px;height:7px;background:#bb7626;border-radius:50%;flex-shrink:0}
+.py-tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.py-tags li{font-size:11px;font-weight:650;padding:3px 9px;border:1px solid var(--py-line);border-radius:6px;background:#fff}
+.py-feature-bottom{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--py-line);padding-top:14px}
+.py-evidence{font-size:12px;line-height:1.5;font-weight:650;margin:0;color:var(--py-muted)}
+.py-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;background:var(--py-accent);color:#fff!important;border:1px solid var(--py-accent);border-radius:9px;padding:10px 17px;font-size:13px;font-weight:750;text-decoration:none;line-height:1.4}
+.py-button:hover{background:#4245af}
+.py-feature a:focus-visible,.py-case a:focus-visible,.py-case summary:focus-visible{outline:3px solid var(--py-accent);outline-offset:4px}
+.py-demo{margin:0;background:#fff;border:1px solid #d9d7e1;border-radius:14px;overflow:hidden;box-shadow:0 8px 28px #22223a09;text-align:left}
+.py-demo-bar{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid #e7e5ee;background:#f4f3f8;color:#484850;font-size:12px;font-weight:700}
+.py-hash{font-size:19px;font-weight:500;color:#777582;line-height:1}
+.py-demo-platform{margin-left:auto;font-size:10px;font-weight:600;color:#666370}
+.py-chat{padding:17px 18px 13px;display:grid;gap:15px}
+.py-message{display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;font-size:12px;line-height:1.65}
+.py-message b{font-size:12px;font-weight:750}
+.py-message p{margin:2px 0 3px;color:#46464e;font-size:12px;line-height:1.55}
+.py-message ol{margin:4px 0 0;padding-left:19px;color:#34343e}
+.py-message li{padding-left:3px}
+.py-avatar{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:9px;background:#5b5fef;color:#fff;font-weight:800;font-size:13px}
+.py-avatar.py-user{background:#eeedf2;color:#565460}
+.py-app{display:inline-block;font-size:8px;line-height:1.4;letter-spacing:.04em;margin-left:6px;padding:1px 4px;border-radius:3px;background:#eeedff;color:#5155cf;font-weight:800;vertical-align:middle}
+.py-annotations{list-style:none;display:flex;flex-wrap:wrap;gap:5px 12px;padding:10px 16px;margin:0;border-top:1px solid #efedf2;color:#4b4d79;background:#fafafe}
+.py-annotations li{font-size:11px;font-weight:650;display:flex;align-items:center;gap:5px}
+.py-annotations li:before{content:'✓';color:#176b5c;font-size:10px}
+.py-demo figcaption{font-size:11px;line-height:1.5;color:#696671;padding:8px 16px;background:#fff}
+.py-context{font-size:13px;line-height:1.65;margin:0 0 24px;padding:12px 0;border-bottom:1px solid var(--line)}
+.py-context a{color:#5155cf;text-decoration:underline;text-underline-offset:4px;display:inline-block;padding:6px 0}
+@media(min-width:1100px){.py-feature{min-height:380px}}
+@media(max-width:1099px){.py-feature{padding:24px;gap:20px}.py-feature .py-headline{font-size:32px}.py-feature h2{font-size:14px}}
+@media(max-width:699px){.py-feature{grid-template-columns:1fr;padding:22px 18px;gap:20px;border-radius:16px}.py-feature .py-headline{font-size:34px}.py-feature-bottom{flex-direction:column;align-items:stretch;gap:12px}.py-feature .py-button{width:100%}.py-chat{padding:15px 12px}.py-message{gap:8px}.py-demo-bar{padding:10px 12px}.py-annotations{padding:10px 12px;gap:6px 10px}.py-demo figcaption{padding:8px 12px}.py-demo-platform{font-size:9px}}
